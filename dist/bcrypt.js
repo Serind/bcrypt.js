@@ -236,7 +236,7 @@
     function safeStringCompare(known, unknown) {
         var diff = known.length ^ unknown.length;
         for (var i = 0; i < known.length; ++i) {
-            diff |= known.charCodeAt(i) ^ unknown.charCodeAt(i);
+            diff |= known.toLowerCase().charCodeAt(i) ^ unknown.toLowerCase().charCodeAt(i);
         }
         return diff === 0;
     }
